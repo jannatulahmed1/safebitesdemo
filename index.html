@@ -23,48 +23,17 @@
             color: black; /* Link text color */
             font-weight: bold; /* Bold text for links */
         }
-        .hero {
-            position: relative;
-            text-align: center;
-            color: white; /* White text color for contrast */
-        }
-        .hero img {
-            width: 100%; /* Full width image */
-            height: auto; /* Maintain aspect ratio */
-            max-height: 400px; /* Limit height of the image */
-            object-fit: cover; /* Cover the space without distortion */
-        }
-        .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center text in the middle of the image */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-            padding: 1em; /* Padding for the text */
-        }
-        .cta-buttons {
-            margin-top: 1em; /* Space above buttons */
-        }
-        .cta-button {
-            background-color: #4CAF50; /* Green background for buttons */
-            color: white; /* Button text color */
-            padding: 0.75em 1.5em; /* Padding for buttons */
-            text-decoration: none; /* Remove underline from links */
-            border-radius: 5px; /* Rounded corners */
-            margin: 0 10px; /* Space between buttons */
-            font-weight: bold; /* Bold text for buttons */
-            transition: background-color 0.3s; /* Smooth background change */
-        }
-        .cta-button:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
-        /* Optional styles for additional content */
         main {
             padding: 2em; /* Padding around main content */
             text-align: center; /* Center the text */
         }
-        h2 {
-            margin-top: 2em; /* Space above section */
+        h1 {
+            font-size: 2.5em; /* Size of main heading */
+            margin-bottom: 0.5em; /* Space below the heading */
+        }
+        p {
+            font-size: 1.2em; /* Size of the paragraph text */
+            color: #555; /* Dark gray color for text */
         }
     </style>
 </head>
@@ -77,24 +46,10 @@
             <a href="restaurant-details.html">Restaurant Details</a>
         </nav>
     </header>
-    
-    <div class="hero">
-        <img src="https://example.com/path/to/your-food-image.jpg" alt="Delicious Food"> <!-- Replace with your image URL -->
-        <div class="hero-text">
-            <h1>Welcome to SafeBites!</h1>
-            <p>Your guide to finding allergy-free restaurants.</p>
-            <div class="cta-buttons">
-                <a href="about.html" class="cta-button">Learn More</a>
-                <a href="restaurant-details.html" class="cta-button">Find Restaurants</a>
-            </div>
-        </div>
-    </div>
-
     <main>
-        <h2>Discover Delicious Allergy-Free Meals</h2>
-        <p>Explore our curated list of restaurants that cater to your dietary needs.</p>
+        <h1>Welcome to SafeBites!</h1>
+        <p>Your guide to finding allergy-free restaurants.</p>
     </main>
 </body>
 </html>
-
 
