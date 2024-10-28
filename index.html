@@ -23,26 +23,43 @@
             color: black; /* Link text color */
             font-weight: bold; /* Bold text for links */
         }
-        main {
-            padding: 2em; /* Padding around main content */
-            text-align: center; /* Center the text */
+        .hero {
+            background-color: #fff; /* White background for hero section */
+            text-align: center;
+            padding: 2em 1em; /* Padding for hero section */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
-        h1 {
+        .hero h1 {
             font-size: 2.5em; /* Size of main heading */
             margin-bottom: 0.5em; /* Space below the heading */
         }
-        p {
+        .hero p {
             font-size: 1.2em; /* Size of the paragraph text */
             color: #555; /* Dark gray color for text */
+            margin-bottom: 1.5em; /* Space below paragraph */
         }
-        /* Add styles for a footer if needed */
-        footer {
-            background-color: #C9CDBA;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+        .cta-buttons {
+            display: flex;
+            justify-content: center; /* Center buttons */
+            margin-top: 1em; /* Space above buttons */
+        }
+        .cta-button {
+            background-color: #4CAF50; /* Green background for buttons */
+            color: white; /* Button text color */
+            padding: 0.75em 1.5em; /* Padding for buttons */
+            text-decoration: none; /* Remove underline from links */
+            border-radius: 5px; /* Rounded corners */
+            margin: 0 10px; /* Space between buttons */
+            font-weight: bold; /* Bold text for buttons */
+            transition: background-color 0.3s; /* Smooth background change */
+        }
+        .cta-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        /* Optional styles for additional content */
+        main {
+            padding: 2em; /* Padding around main content */
+            text-align: center; /* Center the text */
         }
     </style>
 </head>
@@ -55,12 +72,20 @@
             <a href="restaurant-details.html">Restaurant Details</a>
         </nav>
     </header>
-    <main>
+    
+    <div class="hero">
         <h1>Welcome to SafeBites!</h1>
         <p>Your guide to finding allergy-free restaurants.</p>
+        <div class="cta-buttons">
+            <a href="about.html" class="cta-button">Learn More</a>
+            <a href="restaurant-details.html" class="cta-button">Find Restaurants</a>
+        </div>
+    </div>
+
+    <main>
+        <h2>Discover Delicious Allergy-Free Meals</h2>
+        <p>Explore our curated list of restaurants that cater to your dietary needs.</p>
     </main>
-    <footer>
-        <p>&copy; 2024 SafeBites. All rights reserved.</p>
-    </footer>
 </body>
 </html>
+
