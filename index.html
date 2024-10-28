@@ -24,23 +24,25 @@
             font-weight: bold; /* Bold text for links */
         }
         .hero {
-            background-color: #fff; /* White background for hero section */
+            position: relative;
             text-align: center;
-            padding: 2em 1em; /* Padding for hero section */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            color: white; /* White text color for contrast */
         }
-        .hero h1 {
-            font-size: 2.5em; /* Size of main heading */
-            margin-bottom: 0.5em; /* Space below the heading */
+        .hero img {
+            width: 100%; /* Full width image */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 400px; /* Limit height of the image */
+            object-fit: cover; /* Cover the space without distortion */
         }
-        .hero p {
-            font-size: 1.2em; /* Size of the paragraph text */
-            color: #555; /* Dark gray color for text */
-            margin-bottom: 1.5em; /* Space below paragraph */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center text in the middle of the image */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            padding: 1em; /* Padding for the text */
         }
         .cta-buttons {
-            display: flex;
-            justify-content: center; /* Center buttons */
             margin-top: 1em; /* Space above buttons */
         }
         .cta-button {
@@ -61,6 +63,9 @@
             padding: 2em; /* Padding around main content */
             text-align: center; /* Center the text */
         }
+        h2 {
+            margin-top: 2em; /* Space above section */
+        }
     </style>
 </head>
 <body>
@@ -74,11 +79,14 @@
     </header>
     
     <div class="hero">
-        <h1>Welcome to SafeBites!</h1>
-        <p>Your guide to finding allergy-free restaurants.</p>
-        <div class="cta-buttons">
-            <a href="about.html" class="cta-button">Learn More</a>
-            <a href="restaurant-details.html" class="cta-button">Find Restaurants</a>
+        <img src="https://example.com/path/to/your-food-image.jpg" alt="Delicious Food"> <!-- Replace with your image URL -->
+        <div class="hero-text">
+            <h1>Welcome to SafeBites!</h1>
+            <p>Your guide to finding allergy-free restaurants.</p>
+            <div class="cta-buttons">
+                <a href="about.html" class="cta-button">Learn More</a>
+                <a href="restaurant-details.html" class="cta-button">Find Restaurants</a>
+            </div>
         </div>
     </div>
 
@@ -88,4 +96,5 @@
     </main>
 </body>
 </html>
+
 
