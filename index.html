@@ -38,11 +38,12 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 18px; /* Increased font size */
         }
 
         nav a:hover {
             text-decoration: underline;
+            color: #8B0000; /* Dark red on hover */
         }
 
         /* Main content styling */
@@ -63,34 +64,6 @@
             font-size: 1.2em;
             color: #666;
         }
-
-        /* Search bar styling */
-        .search-container {
-            margin-top: 20px; /* Space above the search bar */
-        }
-
-        .search-bar {
-            padding: 10px;
-            font-size: 1em;
-            width: 300px; /* Width of the search bar */
-            border: 1px solid #ccc; /* Border styling */
-            border-radius: 5px; /* Rounded corners */
-        }
-
-        .search-button {
-            padding: 10px;
-            font-size: 1em;
-            margin-left: 10px; /* Space between search bar and button */
-            background-color: #4a4a32; /* Button background color */
-            color: white; /* Button text color */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Change cursor on hover */
-        }
-
-        .search-button:hover {
-            background-color: #3b3b2e; /* Darker shade on hover */
-        }
     </style>
 </head>
 <body>
@@ -110,10 +83,6 @@
     <main>
         <h1>Taste the Joy of Safe Eating!</h1>
         <p>Enter your allergy and start your journey to safe dining:</p>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search for your allergy..." />
-            <button class="search-button">Search</button>
-        </div>
     </main>
 </body>
 </html>
