@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeBites</title>
     <!-- Favicon Link -->
-    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E_6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
         /* General styling */
         body {
@@ -64,6 +64,32 @@
             font-size: 1.2em;
             color: #666;
         }
+
+        /* Search bar styling */
+        .search-container {
+            margin-top: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px; /* Width of the search input */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .search-container button {
+            padding: 10px 15px; /* Padding for the button */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor */
+            margin-left: 10px; /* Space between input and button */
+        }
+
+        .search-container button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
     </style>
 </head>
 <body>
@@ -83,11 +109,12 @@
     <main>
         <h1>Taste the Joy of Safe Eating!</h1>
         <p>Enter your allergy and start your journey to safe dining:</p>
+        
+        <!-- Search bar container -->
+        <div class="search-container">
+            <input type="text" placeholder="Search for your allergy..." />
+            <button type="button">Search</button>
+        </div>
     </main>
 </body>
 </html>
-
-
-
-
-
