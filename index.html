@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeBites</title>
     <!-- Favicon Link -->
-    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E_6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k?source=screenshot.guru" type="image/png" sizes="16x16">
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E_6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
         /* General styling */
         body {
@@ -18,44 +18,37 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px;
+            padding: 10px 20px; /* Adjusted padding for a cleaner look */
             background-color: #d3d8c8;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
         }
 
         .logo img {
-            height: 40px;
-            width: auto;
-            margin-right: 10px;
+            height: 40px; /* Adjusted height to fit header */
+            width: 40px; /* Adjusted width to maintain aspect ratio */
+            margin-right: 10px; /* Space between logo and text */
         }
 
-        .logo a {
-            color: #4a4a32;
+        .logo-text {
+            font-size: 1.2em;
             font-weight: bold;
-            font-size: 24px;
+            color: #4a4a32;
             text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
         }
 
         nav a {
-            color: #4a4a32;
+            color: #666;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         nav a:hover {
-            color: #666;
             text-decoration: underline;
         }
 
@@ -82,11 +75,12 @@
 <body>
     <header>
         <div class="logo">
-            <!-- Logo link to homepage -->
+            <!-- Clickable logo linked to homepage -->
             <a href="index.html">
-                <img src="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E_6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" alt="SafeBites Logo" />
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E_6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" alt="Logo" />
             </a>
-            <a href="index.html">SafeBites</a>
+            <!-- Logo text next to the logo image -->
+            <a href="index.html" class="logo-text">SafeBites</a>
         </div>
         <nav>
             <a href="login.html">Login</a>
@@ -100,6 +94,5 @@
     </main>
 </body>
 </html>
-
 
 
