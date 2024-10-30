@@ -11,7 +11,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            background-color: #e5e5d0;
+            height: 200vh; /* Extend the height for scrolling */
         }
         
         header {
@@ -20,9 +21,10 @@
             justify-content: space-between;
             padding: 10px 20px; /* Adjusted padding for a cleaner look */
             background-color: #d3d8c8;
-            position: fixed; /* Make header fixed */
-            width: 100%; /* Full width */
+            position: sticky; /* Make header sticky */
+            top: 0; /* Stick to the top */
             z-index: 1000; /* Sit on top */
+            transition: top 0.3s; /* Smooth transition for hiding */
         }
         
         .logo {
@@ -56,9 +58,6 @@
             align-items: center;
             padding: 20px;
             text-align: center;
-            margin-top: 100px; /* Space for fixed header */
-            background-color: #e5e5d0; /* Initial background color */
-            height: 100vh; /* Full viewport height */
         }
 
         h1 {
@@ -96,22 +95,6 @@
         .search-container button:hover {
             background-color: #45a049; /* Darker green on hover */
         }
-
-        /* Section styling */
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .white-background {
-            background-color: white; /* White background */
-            height: 100vh; /* Full viewport height */
-        }
-
-        .alternate-background {
-            background-color: #d3e5d8; /* Light green background */
-            height: 100vh; /* Full viewport height */
-        }
     </style>
 </head>
 <body>
@@ -128,7 +111,6 @@
             <a href="restaurant-details.html">Restaurant Details</a>
         </nav>
     </header>
-    
     <main>
         <h1>Taste the Joy of Safe Eating!</h1>
         <p>Enter your allergy and start your journey to safe dining:</p>
@@ -139,21 +121,8 @@
             <button type="button">Search</button>
         </div>
     </main>
-
-    <!-- White background section -->
-    <div class="section white-background">
-        <h2>Why SafeBites?</h2>
-        <p>We help you find restaurants that cater to your allergies, ensuring safe dining experiences.</p>
-    </div>
-
-    <!-- Alternate background section -->
-    <div class="section alternate-background">
-        <h2>Join Our Community</h2>
-        <p>Connect with others who share similar dietary restrictions and find recommendations.</p>
-    </div>
-
-    <!-- Add more sections as needed -->
 </body>
 </html>
+
 
 
