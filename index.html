@@ -133,8 +133,8 @@
         }
 
         .circle {
-            width: 150px; /* Increased width for circles */
-            height: 150px; /* Increased height for circles */
+            width: 200px; /* Increased width for circles */
+            height: 200px; /* Increased height for circles */
             border: 2px dashed #4CAF50; /* Dashed border for circles */
             border-radius: 50%; /* Make it a circle */
             margin: 0 15px; /* Spacing between circles */
@@ -146,7 +146,8 @@
 
         .circle img {
             width: 100%; /* Make image fill the circle */
-            height: auto; /* Maintain aspect ratio */
+            height: 100%; /* Make image fill the circle */
+            object-fit: cover; /* Maintain aspect ratio and fill the circle */
         }
     </style>
 </head>
