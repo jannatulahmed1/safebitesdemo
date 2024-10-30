@@ -10,7 +10,7 @@
         /* General styling */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Set default font for body */
             background-color: #e5e5d0;
             height: 200vh; /* Extend the height for scrolling */
         }
@@ -26,12 +26,6 @@
             left: 0; /* Align left */
             right: 0; /* Align right */
             z-index: 1000; /* Sit on top */
-            transition: transform 0.3s ease; /* Smooth transition for hiding */
-        }
-        
-        /* Hidden state of the header */
-        .hidden {
-            transform: translateY(-100%); /* Move header off-screen */
         }
 
         .logo {
@@ -113,11 +107,13 @@
             margin: 40px 0; /* Spacing around the section */
             text-align: left; /* Align text to the left */
             max-width: 800px; /* Limit the width */
+            color: black; /* Black text color */
+            font-family: Arial, sans-serif; /* Arial font for this section */
         }
 
         .why-safebites h2 {
             font-size: 1.8em; /* Heading size */
-            color: #4a4a32; /* Heading color */
+            font-weight: bold; /* Bold text */
             margin-bottom: 10px; /* Spacing below heading */
         }
 
@@ -190,25 +186,8 @@
             <div class="circle"></div>
         </div>
     </main>
-
-    <script>
-        // JavaScript to hide the header when scrolling down
-        let lastScrollTop = 0;
-        const header = document.getElementById('header');
-
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down
-                header.classList.add('hidden');
-            } else {
-                // Scrolling up
-                header.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        });
-    </script>
 </body>
 </html>
+
 
 
