@@ -103,6 +103,48 @@
         .search-container button:hover {
             background-color: #45a049; /* Darker green on hover */
         }
+
+        /* Why SafeBites section */
+        .why-safebites {
+            background-color: white; /* White background for contrast */
+            padding: 20px; /* Padding around content */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin: 40px 0; /* Spacing around the section */
+            text-align: left; /* Align text to the left */
+            max-width: 800px; /* Limit the width */
+        }
+
+        .why-safebites h2 {
+            font-size: 1.8em; /* Heading size */
+            color: #4a4a32; /* Heading color */
+            margin-bottom: 10px; /* Spacing below heading */
+        }
+
+        .benefits {
+            margin-top: 10px; /* Spacing above benefits */
+        }
+
+        .benefit {
+            margin-bottom: 15px; /* Spacing between benefits */
+        }
+
+        .circles {
+            display: flex; /* Flexbox for circles */
+            justify-content: center; /* Center circles */
+            margin-top: 40px; /* Spacing above circles */
+        }
+
+        .circle {
+            width: 100px; /* Circle width */
+            height: 100px; /* Circle height */
+            border: 2px dashed #4CAF50; /* Dashed border for circles */
+            border-radius: 50%; /* Make it a circle */
+            margin: 0 15px; /* Spacing between circles */
+            display: flex; /* Center content in circles */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+        }
     </style>
 </head>
 <body>
@@ -128,6 +170,25 @@
             <input type="text" placeholder="Search for your allergy..." />
             <button type="button">Search</button>
         </div>
+
+        <!-- Why SafeBites section -->
+        <div class="why-safebites">
+            <h2>Why SafeBites?</h2>
+            <p>At SafeBites, we know dining out with food allergies can be stressful. Our mission is to simplify your restaurant search:</p>
+            <div class="benefits">
+                <div class="benefit">Informed Choices: Access detailed information about allergy-friendly restaurants to dine with confidence.</div>
+                <div class="benefit">Tailored Options: Filter restaurants based on your specific allergies for a personalized experience.</div>
+                <div class="benefit">Community Connections: Join a supportive community where you can share and learn from others facing similar challenges.</div>
+                <div class="benefit">Convenience: Find safe dining options anytime, anywhere with our user-friendly platform.</div>
+            </div>
+        </div>
+
+        <!-- Circle images section -->
+        <div class="circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
     </main>
 
     <script>
@@ -149,6 +210,5 @@
     </script>
 </body>
 </html>
-
 
 
