@@ -5,41 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeBites</title>
     <style>
+        /* General styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Light background color */
+            background-color: #e5e5d0;
         }
+        
         header {
-            background-color: #C9CDBA; /* Header background color */
-            padding: 1em; /* Increased padding for a taller header */
             display: flex;
-            justify-content: space-between; /* Space out links */
-            align-items: center; /* Center items vertically */
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #d3d8c8;
+            color: white;
         }
+        
+        .logo img {
+            height: 80px;
+            width: 120px; /* Adjust width as needed */
+        }
+
         nav a {
-            margin-left: 20px; /* Space between links */
-            text-decoration: none; /* Remove underline from links */
-            color: black; /* Link text color */
-            font-weight: bold; /* Bold text for links */
+            color: #666;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content styling */
         main {
-            padding: 2em; /* Padding around main content */
-            text-align: center; /* Center the text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
         }
+
         h1 {
-            font-size: 2.5em; /* Size of main heading */
-            margin-bottom: 0.5em; /* Space below the heading */
+            font-size: 2em;
+            color: #4a4a32;
         }
+
         p {
-            font-size: 1.2em; /* Size of the paragraph text */
-            color: #555; /* Dark gray color for text */
+            font-size: 1.2em;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>SafeBites</h1> <!-- Title in the header -->
+        <div class="logo">
+            <img src="./public/safebitestransparent.png" alt="Logo" />
+        </div>
         <nav>
             <a href="login.html">Login</a>
             <a href="about.html">About Us</a>
@@ -52,4 +75,5 @@
     </main>
 </body>
 </html>
+
 
