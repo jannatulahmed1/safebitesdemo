@@ -145,6 +145,22 @@
             object-fit: cover; /* Ensures the image fits without cutting off */
             object-position: center; /* Center the image within the circle */
         }
+
+        .image-only {
+            width: calc(33.33% - 20px);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .image-only img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fits without cutting off */
+            object-position: center; /* Center the image within the image-only section */
+        }
     </style>
 </head>
 <body>
@@ -181,9 +197,9 @@
         </div>
 
         <div class="circles">
-            <div class="circle">
+            <div class="image-only">
                 <a href="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w2400?source=screenshot.guru">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w600-h315-p-k" alt="SafeBites Image 1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w600-h315-p-k" alt="SafeBites Image">
                 </a>
             </div>
             <div class="circle"></div>
@@ -192,6 +208,7 @@
     </main>
 </body>
 </html>
+
 
 
 
