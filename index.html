@@ -11,7 +11,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #e5e5d0; /* Initial background color */
+            background-color: #e5e5d0;
             height: 200vh; /* Extend the height for scrolling */
         }
         
@@ -21,12 +21,19 @@
             justify-content: space-between;
             padding: 10px 20px; /* Adjusted padding for a cleaner look */
             background-color: #d3d8c8;
-            position: sticky; /* Make header sticky */
+            position: fixed; /* Make header fixed */
             top: 0; /* Stick to the top */
+            left: 0; /* Align left */
+            right: 0; /* Align right */
             z-index: 1000; /* Sit on top */
-            transition: top 0.3s; /* Smooth transition for hiding */
+            transition: transform 0.3s ease; /* Smooth transition for hiding */
         }
         
+        /* Hidden state of the header */
+        .hidden {
+            transform: translateY(-100%); /* Move header off-screen */
+        }
+
         .logo {
             display: flex;
             align-items: center;
@@ -58,8 +65,7 @@
             align-items: center;
             padding: 20px;
             text-align: center;
-            background-color: #fff; /* White background for main content */
-            min-height: 100vh; /* Ensure it takes at least full viewport height */
+            margin-top: 80px; /* Space for fixed header */
         }
 
         h1 {
@@ -100,7 +106,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo">
             <!-- Clickable logo linked to homepage -->
             <a href="index.html">
@@ -123,6 +129,24 @@
             <button type="button">Search</button>
         </div>
     </main>
+
+    <script>
+        // JavaScript to hide the header when scrolling down
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
 </body>
 </html>
 
