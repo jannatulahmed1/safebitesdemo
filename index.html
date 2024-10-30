@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeBites</title>
-    <!-- Favicon Link -->
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
-        /* General styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #e5e5d0;
-            overflow: hidden; /* Prevent scrollbars from appearing on the body */
+            height: 200vh;
         }
-
+        
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px; /* Adjusted padding for a cleaner look */
+            padding: 10px 20px;
             background-color: #d3d8c8;
-            position: fixed; /* Make header fixed */
-            top: 0; /* Stick to the top */
-            left: 0; /* Align left */
-            right: 0; /* Align right */
-            z-index: 1000; /* Sit on top */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
         .logo {
@@ -34,9 +32,9 @@
         }
 
         .logo img {
-            height: 80px; /* Increased height to fit header */
-            width: 110px; /* Increased width to maintain aspect ratio */
-            margin-right: 10px; /* Space between logo and text */
+            height: 80px;
+            width: 110px;
+            margin-right: 10px;
         }
 
         nav a {
@@ -44,30 +42,21 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 18px; /* Increased font size */
+            font-size: 18px;
         }
 
         nav a:hover {
             text-decoration: underline;
-            color: #8B0000; /* Dark red on hover */
+            color: #8B0000;
         }
 
-        /* Main content styling */
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
             text-align: center;
-            margin-top: 80px; /* Space for fixed header */
-            height: 100vh; /* Full viewport height */
-        }
-
-        section {
-            height: 100vh; /* Each section takes full height */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            margin-top: 80px;
         }
 
         h1 {
@@ -80,50 +69,103 @@
             color: #666;
         }
 
-        /* Background colors for each section */
-        .section1 {
-            background-color: #ffcccc; /* Light red */
-        }
-
-        .section2 {
-            background-color: #ccffcc; /* Light green */
-        }
-
-        .section3 {
-            background-color: #ccccff; /* Light blue */
-        }
-
-        /* Search bar styling */
         .search-container {
             margin-top: 20px;
         }
 
         .search-container input[type="text"] {
             padding: 10px;
-            width: 300px; /* Width of the search input */
-            border: 1px solid #ccc; /* Light border */
-            border-radius: 5px; /* Rounded corners */
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         .search-container button {
-            padding: 10px 15px; /* Padding for the button */
-            background-color: #4CAF50; /* Green background */
-            color: white; /* White text */
-            border: none; /* No border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor */
-            margin-left: 10px; /* Space between input and button */
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
         }
 
         .search-container button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049;
+        }
+
+        .why-safebites {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
+            text-align: left;
+            max-width: 800px;
+            color: black;
+        }
+
+        .why-safebites h2 {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .benefits {
+            margin-top: 10px;
+        }
+
+        .benefit {
+            margin-bottom: 15px;
+        }
+
+        .circles {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        .circle {
+            width: calc(33.33% - 20px);
+            height: 300px;
+            border: 2px dashed #4CAF50;
+            border-radius: 50%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fits without cutting off */
+            object-position: center; /* Center the image within the circle */
+        }
+
+        .image-only {
+            width: calc(33.33% - 20px);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .image-only img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fits without cutting off */
+            object-position: center; /* Center the image within the image-only section */
         }
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo">
-            <!-- Clickable logo linked to homepage -->
             <a href="index.html">
                 <img src="updated logo 2.png" alt="Logo" />
             </a>
@@ -134,26 +176,35 @@
             <a href="restaurant-details.html">Restaurant Details</a>
         </nav>
     </header>
-    
     <main>
-        <section class="section1">
-            <h1>Taste the Joy of Safe Eating!</h1>
-            <p>Enter your allergy and start your journey to safe dining:</p>
-            <div class="search-container">
-                <input type="text" placeholder="Search for your allergy..." />
-                <button type="button">Search</button>
+        <h1>Taste the Joy of Safe Eating!</h1>
+        <p>Enter your allergy and start your journey to safe dining:</p>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Search for your allergy..." />
+            <button type="button">Search</button>
+        </div>
+
+        <div class="why-safebites">
+            <h2>Why SafeBites?</h2>
+            <p>At SafeBites, we know dining out with food allergies can be stressful. Our mission is to simplify your restaurant search:</p>
+            <div class="benefits">
+                <div class="benefit">Informed Choices: Access detailed information about allergy-friendly restaurants to dine with confidence.</div>
+                <div class="benefit">Tailored Options: Filter restaurants based on your specific allergies for a personalized experience.</div>
+                <div class="benefit">Community Connections: Join a supportive community where you can share and learn from others facing similar challenges.</div>
+                <div class="benefit">Convenience: Find safe dining options anytime, anywhere with our user-friendly platform.</div>
             </div>
-        </section>
-        
-        <section class="section2">
-            <h1>Our Commitment</h1>
-            <p>We ensure a safe dining experience for all food allergy sufferers.</p>
-        </section>
-        
-        <section class="section3">
-            <h1>Explore Restaurants</h1>
-            <p>Find restaurants that cater to your dietary needs and preferences.</p>
-        </section>
+        </div>
+
+        <div class="circles">
+            <div class="image-only">
+                <a href="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w2400?source=screenshot.guru">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w600-h315-p-k" alt="SafeBites Image">
+                </a>
+            </div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
     </main>
 </body>
 </html>
