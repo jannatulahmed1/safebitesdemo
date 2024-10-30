@@ -125,6 +125,7 @@
             margin-bottom: 15px; /* Spacing between benefits */
         }
 
+        /* Circle images section */
         .circles {
             display: flex; /* Flexbox for circles */
             justify-content: center; /* Center circles */
@@ -132,14 +133,20 @@
         }
 
         .circle {
-            width: 100px; /* Circle width */
-            height: 100px; /* Circle height */
+            width: 120px; /* Increased width for circles */
+            height: 120px; /* Increased height for circles */
             border: 2px dashed #4CAF50; /* Dashed border for circles */
             border-radius: 50%; /* Make it a circle */
             margin: 0 15px; /* Spacing between circles */
             display: flex; /* Center content in circles */
             align-items: center; /* Center vertically */
             justify-content: center; /* Center horizontally */
+            overflow: hidden; /* Hide overflow for images */
+        }
+
+        .circle img {
+            width: 100%; /* Make image fill the circle */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
@@ -181,13 +188,12 @@
 
         <!-- Circle images section -->
         <div class="circles">
-            <div class="circle"></div>
+            <div class="circle">
+                <img src="https://via.placeholder.com/120" alt="Placeholder for Circle 1"> <!-- Replace with the actual image URL -->
+            </div>
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
     </main>
 </body>
 </html>
-
-
-
