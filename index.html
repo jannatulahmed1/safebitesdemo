@@ -12,25 +12,31 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #e5e5d0;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
-        
+
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px; /* Adjusted padding for a cleaner look */
+            padding: 10px 20px;
             background-color: #d3d8c8;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for header */
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
         }
 
         .logo img {
-            height: 80px; /* Increased height to fit header */
-            width: 110px; /* Increased width to maintain aspect ratio */
-            margin-right: 10px; /* Space between logo and text */
+            height: 80px;
+            width: 110px;
+            margin-right: 10px;
         }
 
         nav a {
@@ -38,31 +44,34 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            font-size: 18px; /* Increased font size */
+            font-size: 18px;
         }
 
         nav a:hover {
             text-decoration: underline;
-            color: #8B0000; /* Dark red on hover */
+            color: #8B0000;
         }
 
         /* Main content styling */
         main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            margin-top: 100px; /* Offset to avoid header overlap */
             text-align: center;
+        }
+
+        section {
+            padding: 60px 20px; /* Space between sections */
         }
 
         h1 {
             font-size: 2em;
             color: #4a4a32;
+            margin-bottom: 10px;
         }
 
         p {
             font-size: 1.2em;
             color: #666;
+            margin-bottom: 20px;
         }
 
         /* Search bar styling */
@@ -72,49 +81,98 @@
 
         .search-container input[type="text"] {
             padding: 10px;
-            width: 300px; /* Width of the search input */
-            border: 1px solid #ccc; /* Light border */
-            border-radius: 5px; /* Rounded corners */
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         .search-container button {
-            padding: 10px 15px; /* Padding for the button */
-            background-color: #4CAF50; /* Green background */
-            color: white; /* White text */
-            border: none; /* No border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor */
-            margin-left: 10px; /* Space between input and button */
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
         }
 
         .search-container button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049;
+        }
+
+        /* Additional sections styling */
+        #features, #how-it-works, #testimonials {
+            background-color: #f5f5f5;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Section backgrounds */
+        #features {
+            background-color: #f5f5e6;
+        }
+
+        #how-it-works {
+            background-color: #d3d8c8;
+        }
+
+        #testimonials {
+            background-color: #e5e5d0;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <!-- Clickable logo linked to homepage -->
             <a href="index.html">
-                <img src="updated logo 2.png" alt="Logo" />
+                <img src="updated_logo_2.png" alt="Logo" />
             </a>
         </div>
         <nav>
-            <a href="login.html">Login</a>
-            <a href="about.html">About Us</a>
-            <a href="restaurant-details.html">Restaurant Details</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#testimonials">Testimonials</a>
         </nav>
     </header>
+
     <main>
-        <h1>Taste the Joy of Safe Eating!</h1>
-        <p>Enter your allergy and start your journey to safe dining:</p>
-        
-        <!-- Search bar container -->
-        <div class="search-container">
-            <input type="text" placeholder="Search for your allergy..." />
-            <button type="button">Search</button>
-        </div>
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Taste the Joy of Safe Eating!</h1>
+            <p>Enter your allergy and start your journey to safe dining:</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search for your allergy..." />
+                <button type="button">Search</button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2>Features</h2>
+            <p>Discover restaurants, find safe dining options, and customize your allergy preferences.</p>
+            <!-- Add any images or features content here -->
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>Search by allergen, review restaurant safety, and make informed dining choices with SafeBites.</p>
+            <!-- Add illustrations or step-by-step process here -->
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>See what others are saying about their safe dining experience.</p>
+            <!-- Add testimonials or customer reviews here -->
+        </section>
     </main>
 </body>
 </html>
+
