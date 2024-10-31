@@ -256,48 +256,61 @@
 
         <!-- Space for images -->
         <div class="image-container">
-            <img src="img.png" alt="Description of Image 1">
-            <img src="img2.png" alt="Description of Image 2">
-            <img src="img3.png" alt="Description of Image 3">
+            <img src="img.png" alt="Food image 1">
+            <img src="img2.png" alt="Food image 2">
+            <img src="img3.png" alt="Food image 3">
         </div>
 
         <!-- User Reviews Section -->
-        <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
-                <div class="user">User 1</div>
-                <div class="comment">"I found my favorite allergy-friendly restaurant!"</div>
+                <div class="user">Alice</div>
+                <div class="comment">I found my favorite restaurant that caters to my allergies! Thanks SafeBites!</div>
             </div>
             <div class="review">
-                <div class="user">User 2</div>
-                <div class="comment">"SafeBites made dining out a breeze!"</div>
+                <div class="user">Bob</div>
+                <div class="comment">Great platform! I feel safe dining out now.</div>
             </div>
             <div class="review">
-                <div class="user">User 3</div>
-                <div class="comment">"A lifesaver for my family!"</div>
+                <div class="user">Charlie</div>
+                <div class="comment">The search function is so helpful. Highly recommend!</div>
             </div>
         </div>
 
         <!-- FAQ Section -->
         <div class="faq-section">
-            <h2>FAQs</h2>
+            <h2>Frequently Asked Questions</h2>
             <div class="faq">
                 <div class="faq-question" onclick="toggleAnswer(this)">What is SafeBites?</div>
-                <div class="faq-answer">SafeBites is a platform designed to help individuals with food allergies and dietary restrictions find safe dining options.</div>
+                <div class="faq-answer">SafeBites is a platform that helps people with food allergies find allergy-friendly restaurants.</div>
             </div>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">How do I search for allergy-friendly restaurants?</div>
-                <div class="faq-answer">Simply enter your allergy in the search bar, and SafeBites will provide a list of compatible restaurants.</div>
+                <div class="faq-question" onclick="toggleAnswer(this)">How do I search for restaurants?</div>
+                <div class="faq-answer">You can search for restaurants by entering your specific allergies in the search bar.</div>
             </div>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">How can I share my experience at a restaurant?</div>
-                <div class="faq-answer">You can contribute by leaving reviews and ratings to guide others in finding allergy-safe dining options.</div>
+                <div class="faq-question" onclick="toggleAnswer(this)">Can I leave reviews?</div>
+                <div class="faq-answer">Yes! Users can leave reviews based on their dining experiences at various restaurants.</div>
             </div>
-
+            <div class="faq">
+                <div class="faq-question" onclick="toggleAnswer(this)">Is there an app for SafeBites?</div>
+                <div class="faq-answer">Currently, SafeBites is a web-based platform, but we are working on an app version!</div>
+            </div>
+        </div>
     </main>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block"; // Show the answer
+            } else {
+                answer.style.display = "none"; // Hide the answer
+            }
+        }
+    </script>
 </body>
 </html>
-
 
 
 
