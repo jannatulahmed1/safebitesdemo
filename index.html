@@ -10,8 +10,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #d3d8c8; /* Initial green background */
-            transition: background-color 0.3s ease;
+            background-color: #e0e5d9; /* Lighter green background */
         }
 
         /* Header styling */
@@ -20,7 +19,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
-            background-color: #d3d8c8;
+            background-color: #d3d8c8; /* Header color */
             position: fixed;
             top: 0;
             left: 0;
@@ -38,14 +37,14 @@
         /* Navigation styling */
         nav a {
             color: #666;
-            text-decoration: none;
+            text-decoration: none; /* Remove underline */
             margin: 0 15px;
             font-weight: bold;
             font-size: 18px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            text-decoration: none; /* Ensure no underline on hover */
             color: #8B0000;
         }
 
@@ -70,8 +69,8 @@
 
         /* Search container styling */
         .search-container {
-            margin-top: 80px;
-            margin-bottom: 200px; /* Adds space before the "Why SafeBites?" section */
+            margin-top: 40px; /* Adjusted margin for better spacing */
+            margin-bottom: 200px;
         }
 
         .search-container input[type="text"] {
@@ -95,46 +94,61 @@
             background-color: #45a049;
         }
 
-        /* Why SafeBites styling */
-        .why-safebites {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            max-width: 1000px;
-            color: black;
-            transition: background-color 0.3s ease;
-        }
-
-        .why-safebites h2 {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
         /* Text box container styling */
         .text-boxes {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 1500px;
+            max-width: 1200px; /* Keep this max-width */
             margin-top: 40px;
         }
 
         .text-box {
             width: calc(33.33% - 20px);
-            padding: 20px;
+            padding: 10px; /* Reduced padding for less space */
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-align: center;
             color: #4a4a32;
-            margin: 0 10px;
+            margin: 0 10px; /* Reduced margin for less space */
+            height: auto; /* Set height to auto for better fit */
         }
 
         .text-box h3 {
             font-size: 1.4em;
             margin-bottom: 10px;
+        }
+
+        /* User Reviews Section Styling */
+        .reviews-section {
+            display: flex;
+            justify-content: space-between;
+            width: 200%;
+            max-width: 1500px;
+            margin: 50px auto;
+        }
+
+        .review {
+            flex: 1;
+            padding: 20px;
+            margin: 0 10px;
+            background-color: #d3d8c8; /* Same color as header */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: #333;
+            text-align: center;
+        }
+
+        .review .user {
+            font-weight: bold;
+            color: #4a4a32;
+        }
+
+        .review .comment {
+            font-size: 1em;
+            color: #666;
+            margin-top: 5px;
         }
 
         /* FAQ Section Styling */
@@ -173,6 +187,24 @@
             font-size: 1em;
             color: #666;
         }
+
+        /* New styling for images below text boxes */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; /* Keep this max-width */
+            margin-top: 40px; /* Space between the text boxes and images */
+        }
+
+        .image-container img {
+            width: calc(33.33% - 20px); /* Match width to text boxes */
+            height: 200px; /* Fixed height for larger images */
+            margin: 0 10px; /* Margin between images */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /* Maintain aspect ratio without distortion */
+        }
     </style>
 </head>
 <body>
@@ -189,17 +221,12 @@
         </nav>
     </header>
     <main>
-        <h1>Taste the Joy of Safe Eating!</h1>
-        <p>Enter your allergy and start your journey to safe dining:</p>
+        <h1>Discover Allergy-Friendly Dining</h1>
         
+        <p>Enter your allergy and start your journey to safe dining:</p>
         <div class="search-container" id="searchContainer">
-            <input type="text" placeholder="Search for your allergy..." />
+            <input type="text" placeholder="Search restaurants now..." />
             <button type="button">Search</button>
-        </div>
-
-        <div class="why-safebites" id="whySafeBites">
-            <h2>Why SafeBites?</h2>
-            <p>At SafeBites, we know dining out with food allergies can be stressful. Our mission is to simplify your restaurant search.</p>
         </div>
 
         <div class="text-boxes">
@@ -214,6 +241,32 @@
             <div class="text-box">
                 <h3>User Reviews</h3>
                 <p>Read and share experiences with a community that understands your concerns.</p>
+            </div>
+        </div>
+
+        <!-- Space for images -->
+        <div class="image-container">
+            <img src="image1.jpg" alt="Description of Image 1">
+            <img src="image2.jpg" alt="Description of Image 2">
+            <img src="image3.jpg" alt="Description of Image 3">
+        </div>
+ 
+
+
+         <!-- User Reviews Section -->
+        <h2>What Our Users Say</h2>
+        <div class="reviews-section">
+            <div class="review">
+                <div class="user">Alex M.</div>
+                <div class="comment">"SafeBites helped me find restaurants where I can eat without worry!"</div>
+            </div>
+            <div class="review">
+                <div class="user">Taylor L.</div>
+                <div class="comment">"Love the allergy-friendly recommendations! SafeBites makes dining out enjoyable again."</div>
+            </div>
+            <div class="review">
+                <div class="user">Jordan S.</div>
+                <div class="comment">"Finding safe dining options is so much easier with SafeBites."</div>
             </div>
         </div>
 
@@ -232,29 +285,5 @@
                 <div class="faq-question" onclick="toggleAnswer(this)">How can I share my experience at a restaurant?</div>
                 <div class="faq-answer">You can contribute by leaving reviews and ratings to guide others in finding allergy-safe dining options.</div>
             </div>
-        </div>
-    </main>
-
-    <script>
-        window.addEventListener('scroll', () => {
-            const searchContainer = document.getElementById('searchContainer');
-            const mainBgColor = '#d3d8c8';
-            const scrollY = window.scrollY;
-            const searchOffset = searchContainer.offsetTop + searchContainer.offsetHeight;
-
-            if (scrollY > searchOffset) {
-                document.body.style.backgroundColor = 'white';
-            } else {
-                document.body.style.backgroundColor = mainBgColor;
-            }
-        });
-
-        function toggleAnswer(questionElement) {
-            const answerElement = questionElement.nextElementSibling;
-            answerElement.style.display = answerElement.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
-</body>
-</html>
 
 
