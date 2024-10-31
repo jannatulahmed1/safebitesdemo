@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4EEE8;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #C9CDBA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0.1rem 0.3rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C9CDBA;
+    padding: 0.5%;
+}
+
+.logo img {
+    max-width: 15vw;
+    max-height: 15vh;
+}
+.menu {
+    display: flex; /* makes sure buttons are aligned horizontally */
+    gap: 10px;
+}
+
+.menu .btn {
+    font-family:"Source Serif 4", serif;
+    background-color: #a63434;
+    color: white;
+    font-size: 1.5em;
+    border: 5% #722020;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0.1rem 0.3rem 0.2rem rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #a63434, #d46a6a);
+}
+section.restaurant-info h2{
+    font-family: "Abril Fatface", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: #922222;
+    text-decoration: underline;
+    margin-left: 5%;
+    text-decoration-thickness: 0.3vw;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.3);
+}
+section.restaurant-info p {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #414907;
+    font-size: 1.2em;
+    margin: 1% 5%;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reviews h3 {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #922222;
+    margin-top: 3%;
+}
+
+.review-box {
+    background-color: #eff8d6;
+    padding: 15px;
+    margin-top: 15px;
+    border: 0.3em solid #6f8059;
+    border-radius: 5px;
+}
+
+.review-box p {
+    margin: 5px 0;
+}
+
+.user-review-title{
+    font-family: "Abril Fatface", serif;
+    color: #414907;
+    font-weight: 400;
+
+}
+
+.user-review-content{
+    font-family: "Source Serif 4", serif;
+    color: #414907;
+    font-weight: 400;
+}
