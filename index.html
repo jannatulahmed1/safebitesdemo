@@ -246,14 +246,12 @@
 
         <!-- Space for images -->
         <div class="image-container">
-            <img src="image1.jpg" alt="Description of Image 1">
-            <img src="image2.jpg" alt="Description of Image 2">
-            <img src="image3.jpg" alt="Description of Image 3">
+            <img src="img.png" alt="Description of Image 1">
+            <img src="img2.png" alt="Description of Image 2">
+            <img src="img3.png" alt="Description of Image 3">
         </div>
- 
 
-
-         <!-- User Reviews Section -->
+        <!-- User Reviews Section -->
         <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
@@ -285,5 +283,16 @@
                 <div class="faq-question" onclick="toggleAnswer(this)">How can I share my experience at a restaurant?</div>
                 <div class="faq-answer">You can contribute by leaving reviews and ratings to guide others in finding allergy-safe dining options.</div>
             </div>
+        </div>
+    </main>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'none' || answer.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
+
 
 
