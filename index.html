@@ -9,12 +9,14 @@
         /* General styles */
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background-color: #e0e5d9;
+            color: #333;
         }
 
         /* Header styling */
@@ -24,18 +26,17 @@
             justify-content: space-between;
             padding: 10px 20px;
             background-color: #d3d8c8;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
+            width: 100%;
             top: 0;
-            left: 0;
-            right: 0;
             z-index: 1000;
         }
 
         /* Logo styling */
         .logo img {
-            height: 80px;
-            width: 110px;
-            margin-right: 10px;
+            height: 60px;
+            width: 80px;
         }
 
         /* Navigation styling */
@@ -45,24 +46,22 @@
             margin: 0 15px;
             font-weight: bold;
             font-size: 18px;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            text-decoration: none;
             color: #8B0000;
         }
 
-        /* Main section styling */
+        /* Main content styling */
         main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
             margin-top: 100px;
+            padding: 20px;
+            text-align: center;
         }
 
         h1 {
-            font-size: 2.2em;
+            font-size: 2.5em;
             color: #4a4a32;
             margin-bottom: 10px;
         }
@@ -70,31 +69,34 @@
         p {
             font-size: 1.2em;
             color: #666;
-            margin-top: -10px;
+            margin: 20px 0;
         }
 
         /* Search container styling */
         .search-container {
-            margin: 30px 0 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
         }
 
         .search-container input[type="text"] {
-            padding: 15px;
-            width: 350px;
-            border: 1px solid #ccc;
+            padding: 12px;
+            width: 300px;
+            border: 2px solid #ccc;
             border-radius: 5px;
-            font-size: 16px;
         }
 
         .search-container button {
-            padding: 15px 20px;
+            padding: 12px 20px;
+            margin-left: 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
-            margin-left: 10px;
-            font-size: 16px;
+            transition: background-color 0.3s;
         }
 
         .search-container button:hover {
@@ -105,37 +107,57 @@
         .text-boxes {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
+            justify-content: center;
+            margin: 40px auto;
             max-width: 1200px;
-            margin-top: 40px;
         }
 
         .text-box {
-            flex: 1 1 calc(33.33% - 20px);
-            padding: 10px;
+            flex: 1 1 calc(30% - 20px);
+            padding: 20px;
+            margin: 10px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            color: #4a4a32;
-            margin: 10px;
-            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .text-box:hover {
+            transform: translateY(-5px);
         }
 
         .text-box h3 {
-            font-size: 1.4em;
+            font-size: 1.5em;
+            color: #4a4a32;
             margin-bottom: 10px;
         }
 
-        /* User Reviews Section Styling */
+        /* Image container styling */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .image-container img {
+            flex: 1 1 calc(30% - 20px);
+            height: 200px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        /* Reviews section styling */
         .reviews-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            width: 100%;
-            max-width: 1200px;
             margin: 50px auto;
+            max-width: 1200px;
         }
 
         .review {
@@ -144,7 +166,7 @@
             margin: 10px;
             background-color: #d3d8c8;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             color: #333;
             text-align: center;
         }
@@ -168,13 +190,12 @@
             margin: 50px auto;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            color: black;
-            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .faq-section h2 {
             font-size: 1.6em;
+            color: #4a4a32;
             margin-bottom: 20px;
         }
 
@@ -188,6 +209,7 @@
             cursor: pointer;
             padding: 10px 0;
             color: #333;
+            font-weight: bold;
         }
 
         .faq-answer {
@@ -195,25 +217,6 @@
             padding: 10px 0;
             font-size: 1em;
             color: #666;
-        }
-
-        /* New styling for images below text boxes */
-        .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            max-width: 1200px;
-            margin-top: 40px;
-        }
-
-        .image-container img {
-            flex: 1 1 calc(33.33% - 20px);
-            height: 200px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
         }
     </style>
 </head>
@@ -232,6 +235,7 @@
     </header>
     <main>
         <h1>Discover Allergy-Friendly Dining</h1>
+        
         <p>Enter your allergy and start your journey to safe dining:</p>
         <div class="search-container" id="searchContainer">
             <input type="text" placeholder="Search restaurants now..." />
@@ -253,14 +257,12 @@
             </div>
         </div>
 
-        <!-- Space for images -->
         <div class="image-container">
-            <img src="img.png" alt="Description of Image 1">
-            <img src="img2.png" alt="Description of Image 2">
-            <img src="img3.png" alt="Description of Image 3">
+            <img src="img.png" alt="Image 1">
+            <img src="img2.png" alt="Image 2">
+            <img src="img3.png" alt="Image 3">
         </div>
 
-        <!-- User Reviews Section -->
         <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
@@ -304,8 +306,8 @@
         });
     });
 </script>
+
     </main>
 </body>
 </html>
-
 
