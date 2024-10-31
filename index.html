@@ -290,6 +290,17 @@
                 <div class="faq-answer">Yes, you can share your experiences and read others' reviews on our platform.</div>
             </div>
         </div>
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", function() {
+                const answer = this.nextElementSibling;
+                answer.style.display = (answer.style.display === "block") ? "none" : "block";
+            });
+        });
+    });
+</script>
     </main>
 </body>
 </html>
