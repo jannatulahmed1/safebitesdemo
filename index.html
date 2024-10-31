@@ -136,6 +136,43 @@
             font-size: 1.4em;
             margin-bottom: 10px;
         }
+
+        /* FAQ Section Styling */
+        .faq-section {
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: black;
+            text-align: left;
+        }
+
+        .faq-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            margin: 15px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .faq-question {
+            font-size: 1.2em;
+            cursor: pointer;
+            padding: 10px 0;
+            color: #333;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px 0;
+            font-size: 1em;
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -163,10 +200,6 @@
         <div class="why-safebites" id="whySafeBites">
             <h2>Why SafeBites?</h2>
             <p>At SafeBites, we know dining out with food allergies can be stressful. Our mission is to simplify your restaurant search.</p>
-            <div class="benefit">Informed Choices: Access detailed information about allergy-friendly restaurants to dine with confidence.</div>
-            <div class="benefit">Tailored Options: Filter restaurants based on your specific allergies for a personalized experience.</div>
-            <div class="benefit">Community Connections: Join a supportive community where you can share and learn from others facing similar challenges.</div>
-            <div class="benefit">Convenience: Find safe dining options anytime, anywhere with our user-friendly platform.</div>
         </div>
 
         <div class="text-boxes">
@@ -183,12 +216,28 @@
                 <p>Read and share experiences with a community that understands your concerns.</p>
             </div>
         </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>FAQs</h2>
+            <div class="faq">
+                <div class="faq-question" onclick="toggleAnswer(this)">What is SafeBites?</div>
+                <div class="faq-answer">SafeBites is a platform designed to help individuals with food allergies and dietary restrictions find safe dining options.</div>
+            </div>
+            <div class="faq">
+                <div class="faq-question" onclick="toggleAnswer(this)">How do I search for allergy-friendly restaurants?</div>
+                <div class="faq-answer">Simply enter your allergy in the search bar, and SafeBites will provide a list of compatible restaurants.</div>
+            </div>
+            <div class="faq">
+                <div class="faq-question" onclick="toggleAnswer(this)">How can I share my experience at a restaurant?</div>
+                <div class="faq-answer">You can contribute by leaving reviews and ratings to guide others in finding allergy-safe dining options.</div>
+            </div>
+        </div>
     </main>
 
     <script>
         window.addEventListener('scroll', () => {
             const searchContainer = document.getElementById('searchContainer');
-            const whySafeBites = document.getElementById('whySafeBites');
             const mainBgColor = '#d3d8c8';
             const scrollY = window.scrollY;
             const searchOffset = searchContainer.offsetTop + searchContainer.offsetHeight;
@@ -199,6 +248,11 @@
                 document.body.style.backgroundColor = mainBgColor;
             }
         });
+
+        function toggleAnswer(questionElement) {
+            const answerElement = questionElement.nextElementSibling;
+            answerElement.style.display = answerElement.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
 </body>
 </html>
