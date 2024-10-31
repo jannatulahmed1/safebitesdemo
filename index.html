@@ -64,16 +64,18 @@
         h1 {
             font-size: 2em;
             color: #4a4a32;
+            margin-bottom: 20px; /* Space below the heading */
         }
 
         p {
             font-size: 1.2em;
             color: #666;
+            margin-bottom: 40px; /* Space below the paragraph */
         }
 
         /* Search container styling */
         .search-container {
-            margin: 40px 0 200px; /* Adjusted margin for better spacing */
+            margin-bottom: 60px; /* Adjusted margin for better spacing */
         }
 
         .search-container input[type="text"] {
@@ -105,6 +107,7 @@
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
             margin-top: 40px;
+            margin-bottom: 40px; /* Space below text boxes */
         }
 
         .text-box {
@@ -124,6 +127,26 @@
             margin-bottom: 10px;
         }
 
+        /* New styling for images below text boxes */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping of images */
+            justify-content: center; /* Center the images */
+            width: 100%;
+            max-width: 1200px; /* Keep this max-width */
+            margin-top: 40px; /* Space between the text boxes and images */
+            margin-bottom: 40px; /* Space below the image container */
+        }
+
+        .image-container img {
+            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
+            height: 200px; /* Fixed height for larger images */
+            margin: 10px; /* Margin between images */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /* Maintain aspect ratio without distortion */
+        }
+
         /* User Reviews Section Styling */
         .reviews-section {
             display: flex;
@@ -131,7 +154,7 @@
             justify-content: center; /* Center the reviews */
             width: 100%;
             max-width: 1500px;
-            margin: 50px auto;
+            margin: 50px auto; /* Margin for spacing */
         }
 
         .review {
@@ -192,25 +215,6 @@
             font-size: 1em;
             color: #666;
         }
-
-        /* New styling for images below text boxes */
-        .image-container {
-            display: flex;
-            flex-wrap: wrap; /* Allows wrapping of images */
-            justify-content: center; /* Center the images */
-            width: 100%;
-            max-width: 1200px; /* Keep this max-width */
-            margin-top: 40px; /* Space between the text boxes and images */
-        }
-
-        .image-container img {
-            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
-            height: 200px; /* Fixed height for larger images */
-            margin: 10px; /* Margin between images */
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            object-fit: cover; /* Maintain aspect ratio without distortion */
-        }
     </style>
 </head>
 <body>
@@ -261,16 +265,16 @@
         <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
-                <div class="user">Alex M.</div>
-                <div class="comment">"SafeBites helped me find restaurants where I can eat without worry!"</div>
+                <div class="user">User 1</div>
+                <div class="comment">"I found my favorite allergy-friendly restaurant!"</div>
             </div>
             <div class="review">
-                <div class="user">Taylor L.</div>
-                <div class="comment">"I love the user-friendly interface and detailed allergy info!"</div>
+                <div class="user">User 2</div>
+                <div class="comment">"SafeBites made dining out a breeze!"</div>
             </div>
             <div class="review">
-                <div class="user">Jamie K.</div>
-                <div class="comment">"A game changer for anyone with food allergies!"</div>
+                <div class="user">User 3</div>
+                <div class="comment">"A lifesaver for my family!"</div>
             </div>
         </div>
 
@@ -278,31 +282,22 @@
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div class="faq">
-                <div class="faq-question">How do I find allergy-friendly restaurants?</div>
-                <div class="faq-answer">You can use our search feature to filter restaurants based on your allergies.</div>
+                <div class="faq-question">What is SafeBites?</div>
+                <div class="faq-answer">SafeBites helps people with food allergies find safe restaurants to dine at.</div>
             </div>
             <div class="faq">
-                <div class="faq-question">Can I leave a review?</div>
-                <div class="faq-answer">Yes! We encourage users to share their experiences to help others.</div>
+                <div class="faq-question">How does it work?</div>
+                <div class="faq-answer">Simply enter your allergies, and we provide a list of restaurants that accommodate your needs.</div>
             </div>
             <div class="faq">
-                <div class="faq-question">Is SafeBites free to use?</div>
-                <div class="faq-answer">Yes! SafeBites is completely free for users.</div>
+                <div class="faq-question">Is it free to use?</div>
+                <div class="faq-answer">Yes, SafeBites is completely free!</div>
             </div>
         </div>
     </main>
-    <script>
-        // FAQ toggle functionality
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
 </body>
 </html>
+
 
 
 
