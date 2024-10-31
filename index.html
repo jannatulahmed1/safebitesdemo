@@ -64,16 +64,18 @@
         h1 {
             font-size: 2em;
             color: #4a4a32;
+            margin-bottom: 20px; /* Add spacing below the main title */
         }
 
         p {
             font-size: 1.2em;
             color: #666;
+            margin-bottom: 40px; /* Add spacing below the paragraph */
         }
 
         /* Search container styling */
         .search-container {
-            margin: 40px 0 200px; /* Adjusted margin for better spacing */
+            margin: 40px 0 40px; /* Adjusted margin for better spacing */
         }
 
         .search-container input[type="text"] {
@@ -104,7 +106,8 @@
             justify-content: space-between;
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
-            margin-top: 40px;
+            margin-top: 40px; /* Space above the text boxes */
+            margin-bottom: 40px; /* Space below the text boxes */
         }
 
         .text-box {
@@ -131,7 +134,7 @@
             justify-content: center; /* Center the reviews */
             width: 100%;
             max-width: 1500px;
-            margin: 50px auto;
+            margin: 40px auto; /* Adjust margin for spacing */
         }
 
         .review {
@@ -161,7 +164,7 @@
             background-color: white;
             width: 100%;
             max-width: 800px;
-            margin: 50px auto;
+            margin: 40px auto; /* Adjust margin for spacing */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -200,7 +203,7 @@
             justify-content: center; /* Center the images */
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
-            margin-top: 40px; /* Space between the text boxes and images */
+            margin: 40px auto; /* Space above and below the images */
         }
 
         .image-container img {
@@ -261,53 +264,47 @@
         <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
-                <div class="user">Alex M.</div>
-                <div class="comment">"SafeBites helped me find restaurants where I can eat without worry!"</div>
+                <div class="user">John Doe</div>
+                <div class="comment">SafeBites helped me find a great restaurant for my nut allergy!</div>
             </div>
             <div class="review">
-                <div class="user">Taylor L.</div>
-                <div class="comment">"I love the user-friendly interface and detailed allergy info!"</div>
+                <div class="user">Jane Smith</div>
+                <div class="comment">I love the easy search features and helpful reviews.</div>
             </div>
             <div class="review">
-                <div class="user">Jamie K.</div>
-                <div class="comment">"A game changer for anyone with food allergies!"</div>
+                <div class="user">Emily Johnson</div>
+                <div class="comment">Finally, a tool that understands my dietary restrictions!</div>
             </div>
         </div>
 
-   <!-- FAQ Section -->
+        <!-- FAQ Section -->
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">What is SafeBites?</div>
-                <div class="faq-answer">SafeBites is a platform that helps people with food allergies find allergy-friendly restaurants.</div>
+                <div class="faq-question">What allergies does SafeBites cover?</div>
+                <div class="faq-answer">We cover a wide range of allergies including nuts, gluten, dairy, and more!</div>
             </div>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">How do I search for restaurants?</div>
-                <div class="faq-answer">You can search for restaurants by entering your specific allergies in the search bar.</div>
+                <div class="faq-question">How do I submit a restaurant?</div>
+                <div class="faq-answer">You can submit a restaurant through our submission form available in the restaurant details section.</div>
             </div>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">Can I leave reviews?</div>
-                <div class="faq-answer">Yes! Users can leave reviews based on their dining experiences at various restaurants.</div>
-            </div>
-            <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">Is there an app for SafeBites?</div>
-                <div class="faq-answer">Currently, SafeBites is a web-based platform, but we are working on an app version!</div>
+                <div class="faq-question">Is there a mobile app?</div>
+                <div class="faq-answer">Currently, we are focusing on our website, but a mobile app may be released in the future!</div>
             </div>
         </div>
     </main>
 
     <script>
-        function toggleAnswer(element) {
-            const answer = element.nextElementSibling;
-            if (answer.style.display === "none" || answer.style.display === "") {
-                answer.style.display = "block"; // Show the answer
-            } else {
-                answer.style.display = "none"; // Hide the answer
-            }
-        }
+        // FAQ toggle functionality
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
     </script>
 </body>
 </html>
-
-
 
