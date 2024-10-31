@@ -6,13 +6,15 @@
     <title>SafeBites</title>
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
+        /* General styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #e5e5d0;
-            height: 200vh;
+            background-color: #d3d8c8; /* Initial green background */
+            transition: background-color 0.3s ease;
         }
-        
+
+        /* Header styling */
         header {
             display: flex;
             align-items: center;
@@ -26,17 +28,14 @@
             z-index: 1000;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
+        /* Logo styling */
         .logo img {
             height: 80px;
             width: 110px;
             margin-right: 10px;
         }
 
+        /* Navigation styling */
         nav a {
             color: #666;
             text-decoration: none;
@@ -50,11 +49,11 @@
             color: #8B0000;
         }
 
+        /* Main section styling */
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
             text-align: center;
             margin-top: 80px;
         }
@@ -69,8 +68,10 @@
             color: #666;
         }
 
+        /* Search container styling */
         .search-container {
-            margin-top: 20px;
+            margin-top: 80px;
+            margin-bottom: 200px; /* Adds space before the "Why SafeBites?" section */
         }
 
         .search-container input[type="text"] {
@@ -94,15 +95,15 @@
             background-color: #45a049;
         }
 
+        /* Why SafeBites styling */
         .why-safebites {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin: 40px 0;
-            text-align: left;
-            max-width: 800px;
+            max-width: 1000px;
             color: black;
+            transition: background-color 0.3s ease;
         }
 
         .why-safebites h2 {
@@ -111,55 +112,29 @@
             margin-bottom: 10px;
         }
 
-        .benefits {
-            margin-top: 10px;
-        }
-
-        .benefit {
-            margin-bottom: 15px;
-        }
-
-        .circles {
+        /* Text box container styling */
+        .text-boxes {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1500px;
             margin-top: 40px;
         }
 
-        .circle {
+        .text-box {
             width: calc(33.33% - 20px);
-            height: 300px;
-            border: 2px dashed #4CAF50;
-            border-radius: 50%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #4a4a32;
             margin: 0 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
         }
 
-        .circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fits without cutting off */
-            object-position: center; /* Center the image within the circle */
-        }
-
-        .image-only {
-            width: calc(33.33% - 20px);
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .image-only img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fits without cutting off */
-            object-position: center; /* Center the image within the image-only section */
+        .text-box h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -180,32 +155,51 @@
         <h1>Taste the Joy of Safe Eating!</h1>
         <p>Enter your allergy and start your journey to safe dining:</p>
         
-        <div class="search-container">
+        <div class="search-container" id="searchContainer">
             <input type="text" placeholder="Search for your allergy..." />
             <button type="button">Search</button>
         </div>
 
-        <div class="why-safebites">
+        <div class="why-safebites" id="whySafeBites">
             <h2>Why SafeBites?</h2>
-            <p>At SafeBites, we know dining out with food allergies can be stressful. Our mission is to simplify your restaurant search:</p>
-            <div class="benefits">
-                <div class="benefit">Informed Choices: Access detailed information about allergy-friendly restaurants to dine with confidence.</div>
-                <div class="benefit">Tailored Options: Filter restaurants based on your specific allergies for a personalized experience.</div>
-                <div class="benefit">Community Connections: Join a supportive community where you can share and learn from others facing similar challenges.</div>
-                <div class="benefit">Convenience: Find safe dining options anytime, anywhere with our user-friendly platform.</div>
-            </div>
+            <p>At SafeBites, we know dining out with food allergies can be stressful. Our mission is to simplify your restaurant search.</p>
+            <div class="benefit">Informed Choices: Access detailed information about allergy-friendly restaurants to dine with confidence.</div>
+            <div class="benefit">Tailored Options: Filter restaurants based on your specific allergies for a personalized experience.</div>
+            <div class="benefit">Community Connections: Join a supportive community where you can share and learn from others facing similar challenges.</div>
+            <div class="benefit">Convenience: Find safe dining options anytime, anywhere with our user-friendly platform.</div>
         </div>
 
-        <div class="circles">
-            <div class="image-only">
-                <a href="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w2400?source=screenshot.guru">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPquGPMUL4iIEJjA_9i9P8mVWv5nGk2WtFWrHFtABfLREWAAvftQOF4EwlR_L6rrvCG8I5nD6bEwkZApq5sviIotp_-uR0ijawlUurYqR94Lggf1ck=w600-h315-p-k" alt="SafeBites Image">
-                </a>
+        <div class="text-boxes">
+            <div class="text-box">
+                <h3>Allergy Information</h3>
+                <p>Find in-depth information on ingredients, preparation methods, and more.</p>
             </div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div class="text-box">
+                <h3>Restaurant Recommendations</h3>
+                <p>Get personalized restaurant suggestions based on your unique needs.</p>
+            </div>
+            <div class="text-box">
+                <h3>User Reviews</h3>
+                <p>Read and share experiences with a community that understands your concerns.</p>
+            </div>
         </div>
     </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const searchContainer = document.getElementById('searchContainer');
+            const whySafeBites = document.getElementById('whySafeBites');
+            const mainBgColor = '#d3d8c8';
+            const scrollY = window.scrollY;
+            const searchOffset = searchContainer.offsetTop + searchContainer.offsetHeight;
+
+            if (scrollY > searchOffset) {
+                document.body.style.backgroundColor = 'white';
+            } else {
+                document.body.style.backgroundColor = mainBgColor;
+            }
+        });
+    </script>
 </body>
 </html>
 
