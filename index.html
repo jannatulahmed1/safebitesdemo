@@ -22,13 +22,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 4px 10px;
+            padding: 10px 20px;
             background-color: #d3d8c8; /* Header color */
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
         /* Logo styling */
@@ -64,18 +64,16 @@
         h1 {
             font-size: 2em;
             color: #4a4a32;
-            margin-bottom: 20px; /* Add spacing below the main title */
         }
 
         p {
             font-size: 1.2em;
             color: #666;
-            margin-bottom: 40px; /* Add spacing below the paragraph */
         }
 
         /* Search container styling */
         .search-container {
-            margin: 40px 0 40px; /* Adjusted margin for better spacing */
+            margin: 40px 0 200px; /* Adjusted margin for better spacing */
         }
 
         .search-container input[type="text"] {
@@ -106,8 +104,7 @@
             justify-content: space-between;
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
-            margin-top: 40px; /* Space above the text boxes */
-            margin-bottom: 40px; /* Space below the text boxes */
+            margin-top: 40px;
         }
 
         .text-box {
@@ -133,8 +130,8 @@
             flex-wrap: wrap; /* Allows wrapping of review boxes */
             justify-content: center; /* Center the reviews */
             width: 100%;
-            max-width: 1500px;
-            margin: 40px auto; /* Adjust margin for spacing */
+            max-width: 1200px; /* Match the width of other containers */
+            margin: 50px auto;
         }
 
         .review {
@@ -164,7 +161,7 @@
             background-color: white;
             width: 100%;
             max-width: 800px;
-            margin: 40px auto; /* Adjust margin for spacing */
+            margin: 50px auto;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -203,7 +200,7 @@
             justify-content: center; /* Center the images */
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
-            margin: 40px auto; /* Space above and below the images */
+            margin-top: 40px; /* Space between the text boxes and images */
         }
 
         .image-container img {
@@ -241,7 +238,7 @@
         <div class="text-boxes">
             <div class="text-box">
                 <h3>Allergy Information</h3>
-                <p>Find in-depth information on ingredients and more.</p>
+                <p>Find in-depth information on ingredients, preparation methods, and more.</p>
             </div>
             <div class="text-box">
                 <h3>Restaurant Recommendations</h3>
@@ -249,7 +246,7 @@
             </div>
             <div class="text-box">
                 <h3>User Reviews</h3>
-                <p>Discover firsthand accounts from diners with allergies to help you choose safe and enjoyable dining experiences.</p>
+                <p>Read and share experiences with a community that understands your concerns.</p>
             </div>
         </div>
 
@@ -264,16 +261,16 @@
         <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
-                <div class="user">John S.</div>
-                <div class="comment">SafeBites helped me find a great restaurant for my seafood allergy!</div>
+                <div class="user">Alex M.</div>
+                <div class="comment">"SafeBites helped me find restaurants where I can eat without worry!"</div>
             </div>
             <div class="review">
-                <div class="user">Jane L.</div>
-                <div class="comment">This app is a must-have for anyone with food allergies. I found a local diner that caters to those with gluten sensitivities.</div>
+                <div class="user">Jamie L.</div>
+                <div class="comment">"I love how easy it is to find allergy-friendly options!"</div>
             </div>
             <div class="review">
-                <div class="user">Emily K.</div>
-                <div class="comment">As someone with multiple food allergies, dining out can be stressful. SafeBites has helped me discover restaurants that truly understand allergy concerns. Highly recommend!</div>
+                <div class="user">Taylor R.</div>
+                <div class="comment">"Thanks to SafeBites, I can enjoy dining out again!"</div>
             </div>
         </div>
 
@@ -281,30 +278,20 @@
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div class="faq">
-                <div class="faq-question">What allergies does SafeBites cover?</div>
-                <div class="faq-answer">We cover a wide range of allergies including nuts, gluten, dairy, and more!</div>
+                <div class="faq-question">What allergies do you cover?</div>
+                <div class="faq-answer">We provide information on a wide range of allergies including nuts, gluten, dairy, and more.</div>
             </div>
             <div class="faq">
                 <div class="faq-question">How do I search for restaurants?</div>
-                <div class="faq-answer">Simply enter your food allergies in the search bar, and SafeBites will provide a list of  restaurants that accommodate those allergies.</div>
+                <div class="faq-answer">Simply enter your allergy in the search bar, and we’ll find restaurants that meet your needs.</div>
             </div>
             <div class="faq">
-                <div class="faq-question">What information is available about each restaurant?</div>
-                <div class="faq-answer">Each restaurant listing includes details such as menu items, allergy warnings, user reviews, and contact information to ensure safe dining choices.</div>
+                <div class="faq-question">Can I leave a review?</div>
+                <div class="faq-answer">Absolutely! We encourage users to share their experiences to help others in the community.</div>
             </div>
         </div>
     </main>
-
-    <script>
-        // FAQ toggle functionality
-        const questions = document.querySelectorAll('.faq-question');
-        questions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
 </body>
 </html>
+
 
