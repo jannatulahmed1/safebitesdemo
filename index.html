@@ -205,7 +205,7 @@
 
         .image-container img {
             flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
-            height: 250px; /* Increased height for larger images */
+            height: 200px; /* Fixed height for larger images */
             margin: 10px; /* Margin between images */
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -266,11 +266,11 @@
             </div>
             <div class="review">
                 <div class="user">Taylor L.</div>
-                <div class="comment">"I love the user-friendly interface. It's so easy to find what I need!"</div>
+                <div class="comment">"I love the user-friendly interface and detailed allergy info!"</div>
             </div>
             <div class="review">
-                <div class="user">Jordan K.</div>
-                <div class="comment">"Finally, a solution that understands food allergies!"</div>
+                <div class="user">Jamie K.</div>
+                <div class="comment">"A game changer for anyone with food allergies!"</div>
             </div>
         </div>
 
@@ -278,21 +278,21 @@
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div class="faq">
-                <div class="faq-question">What types of allergies does SafeBites cover?</div>
-                <div class="faq-answer">SafeBites covers a wide range of food allergies, including but not limited to nuts, dairy, gluten, and shellfish.</div>
+                <div class="faq-question">How do I find allergy-friendly restaurants?</div>
+                <div class="faq-answer">You can use our search feature to filter restaurants based on your allergies.</div>
             </div>
             <div class="faq">
-                <div class="faq-question">How do I report a restaurant?</div>
-                <div class="faq-answer">You can report a restaurant directly through our app by clicking the "Report" button on the restaurant's page.</div>
+                <div class="faq-question">Can I leave a review?</div>
+                <div class="faq-answer">Yes! We encourage users to share their experiences to help others.</div>
             </div>
             <div class="faq">
-                <div class="faq-question">Can I share my experience with others?</div>
-                <div class="faq-answer">Absolutely! We encourage users to share their experiences to help others in the community.</div>
+                <div class="faq-question">Is SafeBites free to use?</div>
+                <div class="faq-answer">Yes! SafeBites is completely free for users.</div>
             </div>
         </div>
     </main>
     <script>
-        // FAQ Toggle Functionality
+        // FAQ toggle functionality
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
