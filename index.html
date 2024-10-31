@@ -7,6 +7,10 @@
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
         /* General styles */
+        * {
+            box-sizing: border-box; /* Ensures padding and margin are included in width calculations */
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -69,8 +73,7 @@
 
         /* Search container styling */
         .search-container {
-            margin-top: 40px; /* Adjusted margin for better spacing */
-            margin-bottom: 200px;
+            margin: 40px 0 200px; /* Adjusted margin for better spacing */
         }
 
         .search-container input[type="text"] {
@@ -97,6 +100,7 @@
         /* Text box container styling */
         .text-boxes {
             display: flex;
+            flex-wrap: wrap; /* Allows wrapping of text boxes */
             justify-content: space-between;
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
@@ -104,14 +108,14 @@
         }
 
         .text-box {
-            width: calc(33.33% - 20px);
+            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
             padding: 10px; /* Reduced padding for less space */
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-align: center;
             color: #4a4a32;
-            margin: 0 10px; /* Reduced margin for less space */
+            margin: 10px; /* Margin for spacing */
             height: auto; /* Set height to auto for better fit */
         }
 
@@ -123,16 +127,17 @@
         /* User Reviews Section Styling */
         .reviews-section {
             display: flex;
-            justify-content: space-between;
-            width: 200%;
+            flex-wrap: wrap; /* Allows wrapping of review boxes */
+            justify-content: center; /* Center the reviews */
+            width: 100%;
             max-width: 1500px;
             margin: 50px auto;
         }
 
         .review {
-            flex: 1;
+            flex: 1 1 calc(30% - 20px); /* Responsive flex basis */
             padding: 20px;
-            margin: 0 10px;
+            margin: 10px; /* Margin for spacing */
             background-color: #d3d8c8; /* Same color as header */
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -191,16 +196,17 @@
         /* New styling for images below text boxes */
         .image-container {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap; /* Allows wrapping of images */
+            justify-content: center; /* Center the images */
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
             margin-top: 40px; /* Space between the text boxes and images */
         }
 
         .image-container img {
-            width: calc(33.33% - 20px); /* Match width to text boxes */
-            height: 200px; /* Fixed height for larger images */
-            margin: 0 10px; /* Margin between images */
+            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
+            height: 250px; /* Increased height for larger images */
+            margin: 10px; /* Margin between images */
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             object-fit: cover; /* Maintain aspect ratio without distortion */
@@ -260,39 +266,44 @@
             </div>
             <div class="review">
                 <div class="user">Taylor L.</div>
-                <div class="comment">"Love the allergy-friendly recommendations! SafeBites makes dining out enjoyable again."</div>
+                <div class="comment">"I love the user-friendly interface. It's so easy to find what I need!"</div>
             </div>
             <div class="review">
-                <div class="user">Jordan S.</div>
-                <div class="comment">"Finding safe dining options is so much easier with SafeBites."</div>
+                <div class="user">Jordan K.</div>
+                <div class="comment">"Finally, a solution that understands food allergies!"</div>
             </div>
         </div>
 
         <!-- FAQ Section -->
         <div class="faq-section">
-            <h2>FAQs</h2>
+            <h2>Frequently Asked Questions</h2>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">What is SafeBites?</div>
-                <div class="faq-answer">SafeBites is a platform designed to help individuals with food allergies and dietary restrictions find safe dining options.</div>
+                <div class="faq-question">What types of allergies does SafeBites cover?</div>
+                <div class="faq-answer">SafeBites covers a wide range of food allergies, including but not limited to nuts, dairy, gluten, and shellfish.</div>
             </div>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">How do I search for allergy-friendly restaurants?</div>
-                <div class="faq-answer">Simply enter your allergy in the search bar, and SafeBites will provide a list of compatible restaurants.</div>
+                <div class="faq-question">How do I report a restaurant?</div>
+                <div class="faq-answer">You can report a restaurant directly through our app by clicking the "Report" button on the restaurant's page.</div>
             </div>
             <div class="faq">
-                <div class="faq-question" onclick="toggleAnswer(this)">How can I share my experience at a restaurant?</div>
-                <div class="faq-answer">You can contribute by leaving reviews and ratings to guide others in finding allergy-safe dining options.</div>
+                <div class="faq-question">Can I share my experience with others?</div>
+                <div class="faq-answer">Absolutely! We encourage users to share their experiences to help others in the community.</div>
             </div>
         </div>
     </main>
     <script>
-        function toggleAnswer(element) {
-            const answer = element.nextElementSibling;
-            answer.style.display = answer.style.display === 'none' || answer.style.display === '' ? 'block' : 'none';
-        }
+        // FAQ Toggle Functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
     </script>
 </body>
 </html>
+
 
 
 
