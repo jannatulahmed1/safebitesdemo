@@ -6,80 +6,96 @@
     <title>SafeBites</title>
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
-    /* General styles */
-    * {
-        box-sizing: border-box;
-    }
+        /* General styles */
+        * {
+            box-sizing: border-box; /* Ensures padding and margin are included in width calculations */
+        }
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #e0e5d9;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e0e5d9; /* Lighter green background */
+        }
 
-    /* Header styling */
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-        background-color: #d3d8c8;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-    }
+        /* Header styling */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #d3d8c8; /* Header color */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
 
-    /* Main section styling */
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-top: 80px;
-    }
+        /* Logo styling */
+        .logo img {
+            height: 80px;
+            width: 110px;
+            margin-right: 10px;
+        }
 
-    h1 {
-        font-size: 2em;
-        color: #4a4a32;
-        margin-top: 20px; /* Adjusted margin for spacing */
-    }
+        /* Navigation styling */
+        nav a {
+            color: #666;
+            text-decoration: none; /* Remove underline */
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-    p {
-        font-size: 1.2em;
-        color: #666;
-        margin-top: 10px; /* Added margin for spacing */
-    }
+        nav a:hover {
+            text-decoration: none; /* Ensure no underline on hover */
+            color: #8B0000;
+        }
 
-    /* Search container styling */
-    .search-container {
-        margin: 20px 0 200px; /* Adjusted margin for better spacing */
-    }
+        /* Main section styling */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+        }
 
-    .search-container input[type="text"] {
-        padding: 15px; /* Increased padding */
-        width: 400px; /* Increased width */
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1.1em; /* Slightly increased font size */
-    }
+        h1 {
+            font-size: 2em;
+            color: #4a4a32;
+        }
 
-    .search-container button {
-        padding: 15px 20px; /* Increased padding */
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-left: 10px;
-        font-size: 1.1em; /* Slightly increased font size */
-    }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
 
-    .search-container button:hover {
-        background-color: #45a049;
-    }
+        /* Search container styling */
+        .search-container {
+            margin: 40px 0 200px; /* Adjusted margin for better spacing */
+        }
 
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-container button:hover {
+            background-color: #45a049;
+        }
 
         /* Text box container styling */
         .text-boxes {
