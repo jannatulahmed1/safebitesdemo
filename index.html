@@ -64,18 +64,16 @@
         h1 {
             font-size: 2em;
             color: #4a4a32;
-            margin-bottom: 20px; /* Space below the heading */
         }
 
         p {
             font-size: 1.2em;
             color: #666;
-            margin-bottom: 40px; /* Space below the paragraph */
         }
 
         /* Search container styling */
         .search-container {
-            margin-bottom: 60px; /* Adjusted margin for better spacing */
+            margin: 40px 0 200px; /* Adjusted margin for better spacing */
         }
 
         .search-container input[type="text"] {
@@ -107,7 +105,6 @@
             width: 100%;
             max-width: 1200px; /* Keep this max-width */
             margin-top: 40px;
-            margin-bottom: 40px; /* Space below text boxes */
         }
 
         .text-box {
@@ -127,26 +124,6 @@
             margin-bottom: 10px;
         }
 
-        /* New styling for images below text boxes */
-        .image-container {
-            display: flex;
-            flex-wrap: wrap; /* Allows wrapping of images */
-            justify-content: center; /* Center the images */
-            width: 100%;
-            max-width: 1200px; /* Keep this max-width */
-            margin-top: 40px; /* Space between the text boxes and images */
-            margin-bottom: 40px; /* Space below the image container */
-        }
-
-        .image-container img {
-            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
-            height: 200px; /* Fixed height for larger images */
-            margin: 10px; /* Margin between images */
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            object-fit: cover; /* Maintain aspect ratio without distortion */
-        }
-
         /* User Reviews Section Styling */
         .reviews-section {
             display: flex;
@@ -154,7 +131,7 @@
             justify-content: center; /* Center the reviews */
             width: 100%;
             max-width: 1500px;
-            margin: 50px auto; /* Margin for spacing */
+            margin: 50px auto;
         }
 
         .review {
@@ -215,6 +192,25 @@
             font-size: 1em;
             color: #666;
         }
+
+        /* New styling for images below text boxes */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping of images */
+            justify-content: center; /* Center the images */
+            width: 100%;
+            max-width: 1200px; /* Keep this max-width */
+            margin-top: 40px; /* Space between the text boxes and images */
+        }
+
+        .image-container img {
+            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
+            height: 200px; /* Fixed height for larger images */
+            margin: 10px; /* Margin between images */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /* Maintain aspect ratio without distortion */
+        }
     </style>
 </head>
 <body>
@@ -256,28 +252,29 @@
 
         <!-- Space for images -->
         <div class="image-container">
-            <img src="img.png" alt="Food image 1">
-            <img src="img2.png" alt="Food image 2">
-            <img src="img3.png" alt="Food image 3">
+            <img src="img.png" alt="Description of Image 1">
+            <img src="img2.png" alt="Description of Image 2">
+            <img src="img3.png" alt="Description of Image 3">
         </div>
 
         <!-- User Reviews Section -->
+        <h2>What Our Users Say</h2>
         <div class="reviews-section">
             <div class="review">
-                <div class="user">Alice</div>
-                <div class="comment">I found my favorite restaurant that caters to my allergies! Thanks SafeBites!</div>
+                <div class="user">Alex M.</div>
+                <div class="comment">"SafeBites helped me find restaurants where I can eat without worry!"</div>
             </div>
             <div class="review">
-                <div class="user">Bob</div>
-                <div class="comment">Great platform! I feel safe dining out now.</div>
+                <div class="user">Taylor L.</div>
+                <div class="comment">"I love the user-friendly interface and detailed allergy info!"</div>
             </div>
             <div class="review">
-                <div class="user">Charlie</div>
-                <div class="comment">The search function is so helpful. Highly recommend!</div>
+                <div class="user">Jamie K.</div>
+                <div class="comment">"A game changer for anyone with food allergies!"</div>
             </div>
         </div>
 
-        <!-- FAQ Section -->
+   <!-- FAQ Section -->
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div class="faq">
@@ -311,7 +308,6 @@
     </script>
 </body>
 </html>
-
 
 
 
