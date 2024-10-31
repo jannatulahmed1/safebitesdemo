@@ -8,13 +8,13 @@
     <style>
         /* General styles */
         * {
-            box-sizing: border-box; /* Ensures padding and margin are included in width calculations */
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #e0e5d9; /* Lighter green background */
+            background-color: #e0e5d9;
         }
 
         /* Header styling */
@@ -23,7 +23,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
-            background-color: #d3d8c8; /* Header color */
+            background-color: #d3d8c8;
             position: fixed;
             top: 0;
             left: 0;
@@ -41,14 +41,14 @@
         /* Navigation styling */
         nav a {
             color: #666;
-            text-decoration: none; /* Remove underline */
+            text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
             font-size: 18px;
         }
 
         nav a:hover {
-            text-decoration: none; /* Ensure no underline on hover */
+            text-decoration: none;
             color: #8B0000;
         }
 
@@ -58,39 +58,43 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 100px;
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 2.2em;
             color: #4a4a32;
+            margin-bottom: 10px;
         }
 
         p {
             font-size: 1.2em;
             color: #666;
+            margin-top: -10px;
         }
 
         /* Search container styling */
         .search-container {
-            margin: 40px 0 200px; /* Adjusted margin for better spacing */
+            margin: 30px 0 200px;
         }
 
         .search-container input[type="text"] {
-            padding: 10px;
-            width: 300px;
+            padding: 15px;
+            width: 350px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
 
         .search-container button {
-            padding: 10px 15px;
+            padding: 15px 20px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-left: 10px;
+            font-size: 16px;
         }
 
         .search-container button:hover {
@@ -100,23 +104,23 @@
         /* Text box container styling */
         .text-boxes {
             display: flex;
-            flex-wrap: wrap; /* Allows wrapping of text boxes */
+            flex-wrap: wrap;
             justify-content: space-between;
             width: 100%;
-            max-width: 1200px; /* Keep this max-width */
+            max-width: 1200px;
             margin-top: 40px;
         }
 
         .text-box {
-            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
-            padding: 10px; /* Reduced padding for less space */
+            flex: 1 1 calc(33.33% - 20px);
+            padding: 10px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-align: center;
             color: #4a4a32;
-            margin: 10px; /* Margin for spacing */
-            height: auto; /* Set height to auto for better fit */
+            margin: 10px;
+            height: auto;
         }
 
         .text-box h3 {
@@ -127,18 +131,18 @@
         /* User Reviews Section Styling */
         .reviews-section {
             display: flex;
-            flex-wrap: wrap; /* Allows wrapping of review boxes */
-            justify-content: center; /* Center the reviews */
+            flex-wrap: wrap;
+            justify-content: center;
             width: 100%;
-            max-width: 1200px; /* Match the width of other containers */
+            max-width: 1200px;
             margin: 50px auto;
         }
 
         .review {
-            flex: 1 1 calc(30% - 20px); /* Responsive flex basis */
+            flex: 1 1 calc(30% - 20px);
             padding: 20px;
-            margin: 10px; /* Margin for spacing */
-            background-color: #d3d8c8; /* Same color as header */
+            margin: 10px;
+            background-color: #d3d8c8;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             color: #333;
@@ -196,20 +200,20 @@
         /* New styling for images below text boxes */
         .image-container {
             display: flex;
-            flex-wrap: wrap; /* Allows wrapping of images */
-            justify-content: center; /* Center the images */
+            flex-wrap: wrap;
+            justify-content: center;
             width: 100%;
-            max-width: 1200px; /* Keep this max-width */
-            margin-top: 40px; /* Space between the text boxes and images */
+            max-width: 1200px;
+            margin-top: 40px;
         }
 
         .image-container img {
-            flex: 1 1 calc(33.33% - 20px); /* Responsive flex basis */
-            height: 200px; /* Fixed height for larger images */
-            margin: 10px; /* Margin between images */
+            flex: 1 1 calc(33.33% - 20px);
+            height: 200px;
+            margin: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            object-fit: cover; /* Maintain aspect ratio without distortion */
+            object-fit: cover;
         }
     </style>
 </head>
@@ -228,7 +232,6 @@
     </header>
     <main>
         <h1>Discover Allergy-Friendly Dining</h1>
-        
         <p>Enter your allergy and start your journey to safe dining:</p>
         <div class="search-container" id="searchContainer">
             <input type="text" placeholder="Search restaurants now..." />
