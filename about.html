@@ -9,7 +9,7 @@
         body {
             font-family: 'Inter', sans-serif;
             color: #4a4a32;
-            background-color: #f3f1eb;
+            background: linear-gradient(135deg, #f3f1eb, #d3d8c8);
             margin: 0;
             padding: 0;
             display: flex;
@@ -28,6 +28,7 @@
             background-color: #d3d8c8;
             width: 100%;
             box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .logo img {
@@ -46,6 +47,7 @@
 
         nav a:hover {
             color: #8B0000;
+            text-decoration: none;
         }
 
         /* Main section styling */
@@ -54,7 +56,6 @@
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
-            background-color: #f3f1eb;
             width: 100%;
             box-sizing: border-box;
             height: 100vh; /* Ensure full viewport height */
@@ -65,26 +66,33 @@
             flex-direction: column;
             justify-content: center; /* Center content vertically */
             align-items: center; /* Center content horizontally */
-            background-color: #d3d8c8;
-            padding: 30px;
-            border-radius: 8px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
             width: 100%;
             max-width: 800px;
             text-align: center;
             color: #4a4a32;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transition: none;
+        }
+
+        .about-section:hover {
+            transform: translateY(-10px);
         }
 
         .about-section h1 {
             color: #333;
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .about-section p {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.8;
             margin-bottom: 20px;
+            font-weight: 300;
         }
 
         .contact-info {
@@ -95,28 +103,46 @@
             color: #333;
             font-size: 24px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .contact-info ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .contact-info li {
-            margin: 10px 0;
+            margin: 0;
         }
 
         .contact-info a {
             text-decoration: none;
             color: #4a4a32;
-            font-weight: bold;
+            font-weight: normal;
             font-size: 16px;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .contact-info a:hover {
             color: #8B0000;
+            transform: translateX(5px);
         }
+
+        /* Small screen improvements */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+        }
+
     </style>
 </head>
 <body>
