@@ -6,7 +6,6 @@
     <title>SafeBites</title>
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN3dqli4E6AYA_Tzp9HURJeo7wMvmcmikW6HlXw_Z1RsbxkYO-QllFsSOwaSjJ5tedKmc-UWB-r_KIcT7XjApz1GT--vHUlEPfGkONDx4XckllOUQ=s128-p-k" type="image/png" sizes="16x16">
     <style>
-        /* General styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -71,6 +70,7 @@
             color: #666;
             margin: 20px 0;
         }
+
         /* Search container styling */
         .search-container {
             display: flex;
@@ -79,16 +79,8 @@
             margin: 30px 0;
         }
 
-        .search-container input[type="text"] {
-            padding: 12px;
-            width: 300px;
-            border: 2px solid #b3c1a0;
-            border-radius: 5px;
-        }
-
         .search-container button {
             padding: 12px 20px;
-            margin-left: 10px;
             background-color: #69985c;
             color: white;
             border: none;
@@ -102,8 +94,6 @@
             background-color: #557e4d;
         }
 
-
-        /* Text box container styling */
         .text-boxes {
             display: flex;
             flex-wrap: wrap;
@@ -133,7 +123,6 @@
             margin-bottom: 10px;
         }
 
-        /* Image container styling */
         .image-container {
             display: flex;
             flex-wrap: wrap;
@@ -230,16 +219,15 @@
         <nav>
             <a href="login.html">Login</a>
             <a href="about.html">About Us</a>
-            <a href="restaurant.html">Restaurants</a>  
+            <a href="restaurantDetails.html">Restaurant Details</a> 
         </nav>
     </header>
     <main>
         <h1>Discover Allergy-Friendly Dining</h1>
         
-        <p>Enter your allergy and start your journey to safe dining:</p>
+        <p>Click the button below to start your journey to safe dining:</p>
         <div class="search-container" id="searchContainer">
-            <input type="text" placeholder="Search restaurants now..." />
-            <button type="button">Search</button>
+            <button type="button" onclick="location.href='restaurantDetails.html'">Search</button>
         </div>
 
         <div class="text-boxes">
@@ -278,6 +266,16 @@
                 <div class="comment">"Thanks to SafeBites, I can enjoy dining out again!"</div>
             </div>
         </div>
+        <div style="text-align: center; margin: 20px 0;">
+            <p style="font-size: 1.2em; color: #4a4a32; font-weight: bold;">
+                Want to share your experience? <a href="login.html" style="color: #557e4d; text-decoration: none;">Log in</a> to leave a review!
+            </p>
+        </div>
+        <div style="text-align: center; margin: 20px;">
+            <p style="font-size: 1.1em; color: #4a4a32; font-weight: bold;">
+                Are you logged in? <a href="leaveReview.html" style="color: #69985c;">Leave Your Own Review Here</a>
+            </p>
+        </div>
 
         <!-- FAQ Section -->
         <div class="faq-section">
@@ -296,17 +294,16 @@
             </div>
         </div>
         <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const faqQuestions = document.querySelectorAll(".faq-question");
-        faqQuestions.forEach(question => {
-            question.addEventListener("click", function() {
-                const answer = this.nextElementSibling;
-                answer.style.display = (answer.style.display === "block") ? "none" : "block";
+            document.addEventListener("DOMContentLoaded", function() {
+                const faqQuestions = document.querySelectorAll(".faq-question");
+                faqQuestions.forEach(question => {
+                    question.addEventListener("click", function() {
+                        const answer = this.nextElementSibling;
+                        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+                    });
+                });
             });
-        });
-    });
-</script>
-
+        </script>
     </main>
 </body>
 </html>
