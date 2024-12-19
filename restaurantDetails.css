@@ -3,7 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+main {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
 
+h1 {
+    font-size: 2.5em;
+    color: #4a4a32;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px 0;
+}
+        /* Navigation styling */
+nav a, #navbar a, #navbar, .logout {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    }
+
+nav a:hover, #navbar a:hover, #navbar:hover {
+    color: #8B0000;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d3d8c8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+        
+/* Logo styling */
+.logo img {
+    height: 60px;
+    width: 80px;
+    }
 body {
     font-family: Arial, sans-serif;
     background-color: #F4EEE8;
@@ -17,19 +65,19 @@ body {
     border-radius: 8px;
     box-shadow: 0.1rem 0.3rem 0.2rem rgba(0, 0, 0, 0.3);
 }
-
+/* 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #C9CDBA;
     padding: 0.5%;
-}
+} */
 
-.logo img {
+/* .logo img {
     max-width: 15vw;
     max-height: 15vh;
-}
+} */
 .menu {
     display: flex; /* makes sure buttons are aligned horizontally */
     gap: 10px;
@@ -105,4 +153,17 @@ section.restaurant-info p {
     font-family: "Source Serif 4", serif;
     color: #414907;
     font-weight: 400;
+}
+.logout{
+    background-color: #436656;
+    padding: 10px;
+    border-radius:  15px;
+    border: none;
+    color: #eff8d6;
+    transition: all 0.3s ease;
+}
+.logout:hover{
+    background-color: #eff8d6;
+    color:#414907;
+    cursor:pointer;
 }
