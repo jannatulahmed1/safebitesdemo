@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeBites Restaurant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="restaurantDetails.css">
 </head>
+
 <body>
-            <!-- Navbar -->
-            <header>
-                <div class="logo">
-                    <img src="./public/safebitestransparent.png" alt="Logo" />
-                </div>
-                <div class="menu">
-                    <button class="btn">About Us</button>
-                    <button class="btn">Login</button>
-                </div>
-            </header>
+    <!-- Navbar -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="updated logo 2.png" alt="Logo" />
+            </a>
+        </div>
+        <nav id="navbar">
+            <!-- Links will be dynamically updated here -->
+        </nav>
+    </header>
+
     <div class="container">
-
-        <!-- restaurant info -->
-        <section class="restaurant-info">
-            <h2 class="restaurant-title">Restaurant Name</h2>
-            <p class="restaurantdetails">Restaurant Address: 12-34 Example St, New York, 12345</p>
-            <p class="restaurantdetails">Restaurant Phone Number: (123)-456-7890</p>
-            <p>Restaurant Website: (if available, provide link, or N/A)</p>
-            <p>Allergy-Free Options: (list allergies the restaurant has options for)</p>
+        <!-- Dynamic restaurant info -->
+        <section id="restaurant-list" class="restaurant-info">
+            <h2 class="restaurant-title">Our SafeBites Restaurants</h2>
+            <p>Loading restaurant data...</p>
         </section>
 
-        <!-- User Reviews Section -->
-        <section class="reviews">
-            <h3>User-Made Reviews (Made on our site)</h3>
-            <div class="review-box">
-                <p class="user-review-title">Review Name, by Username on Date Reviewed</p>
-                <p class="user-review-content">5 Star Rating: Review Content</p>
-            </div>
-        </section>
     </div>
+
+    <!-- JavaScript to Fetch and Display Restaurant Data -->
+    <script src="restaurantDetails.js"></script>
+    <script src="updateNavbar.js"></script>
+    <script>
+        async function fetchRestaurants() {
+            try {
+                const response = await fetch('/.netlify/functions/restaurants');
+                const data = await response.json();
+
+                const container = document.getElementById('restaurant-list');
+                container.innerHTML = ''; // Clear loading message
+
+                data.forEach(restaurant => {
+                    const restaurantBox = document.createElement('div');
+                    restaurantBox.className = 'restaurant-details';
+
+                    restaurantBox.innerHTML = `
+                        <h3>${restaurant.name}</h3>
+                        <p><strong>Address:</strong> ${restaurant.address}</p>
+                        <p><strong>Phone:</strong> ${restaurant.phone}</p>
+                        <p><strong>Website:</strong> <a href="${restaurant.website}" target="_blank">Visit Website</a></p>
+                        <p><strong>Allergy-Free Options:</strong> ${restaurant.allergySafeOptions.join(', ')}</p>
+                        <button onclick="openReviewForm(${restaurant.id})">Leave a Review</button>
+                    `;
+
+                    container.appendChild(restaurantBox);
+                });
+
+            } catch (error) {
+                console.error('Error fetching restaurant data:', error);
+                const container = document.getElementById('restaurant-list');
+                container.innerHTML = '<p>Failed to load restaurant data. Please try again later.</p>';
+            }
+        }
+
+        fetchRestaurants();
+    </script>
 </body>
+
 </html>
